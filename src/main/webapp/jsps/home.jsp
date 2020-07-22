@@ -11,7 +11,7 @@
 <body>
 <h1 align="center">Hello Riders</h1>
 <h1 align="center">Welcome to Riders Paradise.</h1>
-<h1 align="center"> Riders Paradise is for all the riders who want to travel around the world, we invite you with us</h1>
+<h1 align="center"> Riders Paradise is for all the riders who want to travel around the world, we invite you with us.</h1>
 <hr>
 <div style="text-align: center;">
 	<span>
