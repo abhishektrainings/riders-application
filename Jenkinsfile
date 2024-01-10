@@ -15,7 +15,7 @@ node
   
   stage("CheckOutCodeGit")
   {
-   git branch: 'development', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+   git branch: 'development', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/abhishektrainings/riders-application.git'
  }
  
  stage("Build")
@@ -37,17 +37,17 @@ node
   stage("DeployAppTomcat")
  {
   sshagent(['423b5b58-c0a3-42aa-af6e-f0affe1bad0c']) {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@15.206.91.239:/opt/apache-tomcat-9.0.34/webapps/" 
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  azureuser@15.206.91.239:/opt/tomcat/webapps/" 
   }
  }
  
  stage('EmailNotification')
  {
- mail bcc: 'devopstrainingblr@gmail.com', body: '''Build is over
+ mail bcc: 'abhishektrainings30@gmail.com', body: '''Build is over
 
  Thanks,
- Mithun Technologies,
- 9980923226.''', cc: 'devopstrainingblr@gmail.com', from: '', replyTo: '', subject: 'Build is over!!', to: 'devopstrainingblr@gmail.com'
+ Abhishek Trainings,
+ 8818877113.''', cc: 'abhishektrainings30@gmail.com', from: '', replyTo: '', subject: 'Build is over!!', to: 'abhishektrainings30@gmail.com'
  }
  */
  
