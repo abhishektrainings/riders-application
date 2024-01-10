@@ -15,7 +15,7 @@ node
   
   stage("CheckOutCodeGit")
   {
-   git branch: 'development', credentialsId: '65fb834f-a83b-4fe7-8e11-686245c47a65', url: 'https://github.com/abhishektrainings/riders-application.git'
+   git branch: 'development', credentialsId: 'none', url: 'https://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@github.com/abhishektrainings/riders-application.git'
  }
  
  stage("Build")
