@@ -1,7 +1,7 @@
 node
  {
   
-  def mavenHome = tool name: "maven3.6.2"
+  def mavenHome = tool name: "maven3.8.8"
   
       echo "GitHub BranhName ${env.BRANCH_NAME}"
       echo "Jenkins Job Number ${env.BUILD_NUMBER}"
@@ -37,7 +37,7 @@ node
   stage("DeployAppTomcat")
  {
   sshagent(['423b5b58-c0a3-42aa-af6e-f0affe1bad0c']) {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  azureuser@15.206.91.239:/opt/tomcat/webapps/" 
+    sh "scp -o StrictHostKeyChecking=no target/riders-application.war  azureuser@15.206.91.239:/opt/tomcat/webapps/" 
   }
  }
  
